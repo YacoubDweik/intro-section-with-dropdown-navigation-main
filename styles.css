@@ -21,15 +21,8 @@ ul {
   list-style: none;
 }
 
-a,
-button {
-  font-family: inherit;
-  font-size: inherit;
-  font-weight: inherit;
-  border: 0;
-  outline: 0;
+a {
   text-decoration: none;
-  background-color: inherit;
   color: inherit;
 }
 
@@ -47,12 +40,12 @@ html {
 body {
   background-color: var(--Almost-White);
   position: relative;
-  overflow-x: hidden;
   z-index: 0;
+  overflow: hidden;
 }
 
 body::before {
-  position: absolute;
+  position: fixed;
   top: 0;
   left: 0;
   content: "";
@@ -95,7 +88,7 @@ body.inactive::before {
 }
 
 .header__nav {
-  position: absolute;
+  position: fixed;
   top: 0;
   right: 0;
   width: 70%;
@@ -186,7 +179,7 @@ body.inactive::before {
   padding: 0;
   flex-direction: column;
   justify-content: space-between;
-  align-items: center;
+  align-items: flex-start;
   gap: var(--la);
   font-size: inherit;
   transition: 0.3s;
@@ -194,7 +187,7 @@ body.inactive::before {
 
 .nav__item.active .nav__submenu {
   height: fit-content;
-  padding: var(--la) 0;
+  padding: var(--la);
 }
 
 .nav__item--has-submenu {
@@ -221,12 +214,7 @@ body.inactive::before {
   align-items: center;
   gap: var(--md);
   margin-top: var(--la);
-}
-
-.nav__buttons button {
-  width: 100%;
-  border-radius: var(--sm);
-  transition: 0.3s;
+  text-align: center;
 }
 
 .nav__buttons .register-button {
@@ -238,10 +226,11 @@ body.inactive::before {
   width: 100%;
   height: 100%;
   padding: var(--md) var(--la);
-  border-radius: inherit;
+  border-radius: var(--sm);
+  transition: 0.3s;
 }
 
-.nav__buttons button:hover {
+.nav__buttons a:hover {
   background-color: var(--Almost-Black);
   color: var(--Almost-White);
 }
@@ -367,6 +356,7 @@ body.inactive::before {
     position: relative;
   }
   .nav__submenu {
+    width: max-content;
     display: flex;
     position: absolute;
     bottom: 0;
@@ -379,11 +369,9 @@ body.inactive::before {
     transition: 0.3s;
   }
   .nav__menu > li:nth-child(1) .nav__submenu {
-    width: 200px;
     right: 0;
   }
   .nav__menu > li:nth-child(2) .nav__submenu {
-    width: 150px;
     left: 0;
   }
   .nav__item.active .nav__submenu {
@@ -405,6 +393,7 @@ body.inactive::before {
     align-items: flex-start;
     text-align: left;
     order: 1;
+    align-self: flex-end;
   }
   .container__image {
     width: 40%;
