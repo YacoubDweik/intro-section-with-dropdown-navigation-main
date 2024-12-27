@@ -1,0 +1,103 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="./styles.css" />
+    <link rel="icon" type="image/png" sizes="32x32" href="./images/favicon-32x32.png" />
+    <title>Frontend Mentor | Intro section with dropdown navigation</title>
+  </head>
+  <body class="">
+    <main class="container">
+      <header class="container__header">
+        <span class="header__logo">snap</span>
+        <span class="header__menu-icon">
+          <img src="./images/icon-menu.svg" alt="icon-menu" />
+        </span>
+        <nav class="header__nav">
+          <div class="nav__wrapper">
+            <span class="nav__close-icon"><img src="./images/icon-close-menu.svg" alt="icon-close-menu" /></span>
+            <ul class="nav__menu">
+              <li class="nav__item inactive nav__item--has-submenu">
+                <span class="item__title">
+                  Features
+                  <img src="./images/icon-arrow-down.svg" alt="down-arrow" />
+                  <img src="./images/icon-arrow-up.svg" alt="up-arrow" />
+                </span>
+                <ul class="nav__submenu">
+                  <li class="submenu__item">
+                    <a href="#" class="submenu__link">
+                      <img src="./images/icon-todo.svg" alt="icon-todo" />
+                      Todo List
+                    </a>
+                  </li>
+                  <li class="submenu__item">
+                    <a href="#" class="submenu__link">
+                      <img src="./images/icon-calendar.svg" alt="icon-calendar" />
+                      Calendar
+                    </a>
+                  </li>
+                  <li class="submenu__item">
+                    <a href="#" class="submenu__link">
+                      <img src="./images/icon-reminders.svg" alt="icon-reminders" />
+                      Reminders
+                    </a>
+                  </li>
+                  <li class="submenu__item">
+                    <a href="#" class="submenu__link">
+                      <img src="./images/icon-planning.svg" alt="icon-planning" />
+                      Planning
+                    </a>
+                  </li>
+                </ul>
+              </li>
+              <li class="nav__item inactive nav__item--has-submenu">
+                <span class="item__title">
+                  Company
+                  <img src="./images/icon-arrow-down.svg" alt="down-arrow" />
+                  <img src="./images/icon-arrow-up.svg" alt="up-arrow" />
+                </span>
+                <ul class="nav__submenu">
+                  <li class="submenu__item"><a href="#" class="submenu__link">History</a></li>
+                  <li class="submenu__item"><a href="#" class="submenu__link">Our Team</a></li>
+                  <li class="submenu__item"><a href="#" class="submenu__link">Blog</a></li>
+                </ul>
+              </li>
+              <li class="nav__item">
+                <a href="#">Careers</a>
+              </li>
+              <li class="nav__item">
+                <a href="#">About</a>
+              </li>
+            </ul>
+            <div class="nav__buttons">
+              <button class="login-button"><a href="#">Login</a></button>
+              <button class="register-button"><a href="#">Register</a></button>
+            </div>
+          </div>
+        </nav>
+      </header>
+      <section class="container__content">
+        <div class="container__body">
+          <h1 class="container__title">Make remote work</h1>
+          <p class="container__text">
+            Get your team in sync, no matter your location. Streamline processes, create team rituals, and watch
+            productivity soar.
+          </p>
+          <button class="container__button"><a href="#" class="learn-more">Learn more</a></button>
+          <div class="container__clients">
+            <img src="./images/client-databiz.svg" alt="client-databiz" />
+            <img src="./images/client-audiophile.svg" alt="client-audiophile" />
+            <img src="./images/client-meet.svg" alt="client-meet" />
+            <img src="./images/client-maker.svg" alt="client-maker" />
+          </div>
+        </div>
+        <picture class="container__image">
+          <source media="(min-width: 768px)" srcset="./images/image-hero-desktop.png" sizes="" />
+          <img src="./images/image-hero-mobile.png" alt="Intro image" />
+        </picture>
+      </section>
+    </main>
+    <script src="./main.js"></script>
+  </body>
+</html>
