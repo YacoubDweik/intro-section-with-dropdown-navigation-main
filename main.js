@@ -15,12 +15,19 @@ container.addEventListener("click", (e) => {
     body.classList.remove("inactive");
     nav.classList.remove("active");
   } else if (navItemWithSubmenu) {
-    allNavItemsWithSubmenu.forEach((item) => {
-      item.classList.add("inactive");
-      item.classList.remove("active");
-    });
-    navItemWithSubmenu.classList.remove("inactive");
-    navItemWithSubmenu.classList.add("active");
+    if (navItemWithSubmenu.classList.contains("inactive")) {
+      allNavItemsWithSubmenu.forEach((item) => {
+        item.classList.add("inactive");
+        item.classList.remove("active");
+      });
+      navItemWithSubmenu.classList.remove("inactive");
+      navItemWithSubmenu.classList.add("active");
+    } else {
+      allNavItemsWithSubmenu.forEach((item) => {
+        item.classList.add("inactive");
+        item.classList.remove("active");
+      });
+    }
   } else {
     allNavItemsWithSubmenu.forEach((item) => {
       item.classList.add("inactive");
