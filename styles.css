@@ -41,7 +41,7 @@ body {
   background-color: var(--Almost-White);
   position: relative;
   z-index: 0;
-  overflow: hidden;
+  overflow-x: hidden;
 }
 
 body::before {
@@ -309,9 +309,6 @@ body.inactive::before {
 @media (min-width: 768px) {
   html {
     font-size: 18px;
-  }
-  body {
-    overflow-x: auto;
   }
   body::before {
     display: none;
