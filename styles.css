@@ -64,6 +64,11 @@ body.inactive::before {
 
 .container {
   min-height: 100vh;
+  padding: var(--la) 0 var(--3xl);
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-start;
+  gap: var(--4xl);
   font-weight: var(--font-bold);
   color: var(--Almost-Black);
   user-select: none;
@@ -73,8 +78,7 @@ body.inactive::before {
   display: flex;
   justify-content: space-between;
   align-items: center;
-  padding: var(--la);
-  margin-bottom: var(--la);
+  padding: 0 var(--la);
 }
 
 .header__logo {
@@ -241,10 +245,11 @@ body.inactive::before {
   flex-direction: column;
   justify-content: space-between;
   align-items: center;
-  gap: var(--2xl);
+  gap: var(--4xl);
 }
 
 .container__image {
+  max-width: 500px;
   display: block;
   order: 1;
 }
@@ -254,13 +259,14 @@ body.inactive::before {
 }
 
 .container__body {
+  max-width: 500px;
   display: flex;
   flex-direction: column;
   justify-content: space-between;
   align-items: center;
   text-align: center;
-  gap: var(--xl);
-  padding: var(--la);
+  gap: var(--2xl);
+  padding: 0 var(--md);
   order: 2;
 }
 
@@ -295,7 +301,7 @@ body.inactive::before {
 .container__clients {
   width: 100%;
   max-width: 550px;
-  margin: var(--xl) 0;
+  /* margin: var(--xl) 0; */
   display: flex;
   flex-direction: row;
   justify-content: space-between;
@@ -313,9 +319,12 @@ body.inactive::before {
   body::before {
     display: none;
   }
+  .container {
+    justify-content: space-between;
+    padding: var(--la) var(--2xl) var(--4xl);
+  }
   .container__header {
-    margin-bottom: 3.75rem;
-    padding: var(--la) var(--2xl);
+    padding: 0;
     gap: var(--2xl);
   }
   .header__menu-icon,
@@ -379,18 +388,18 @@ body.inactive::before {
     margin-top: 0;
   }
   .container__content {
-    min-height: 650px;
     margin: 0 auto;
-    padding: 0 var(--2xl);
+    padding: 0;
     flex-direction: row;
   }
   .container__body {
+    max-width: 100%;
     width: 51%;
     padding: 0;
+    padding-right: var(--2xl);
     align-items: flex-start;
     text-align: left;
     order: 1;
-    align-self: flex-end;
   }
   .container__image {
     width: 40%;
@@ -410,7 +419,8 @@ body.inactive::before {
   .container__header {
     flex-wrap: wrap;
     justify-content: center;
-    padding: var(--la);
+    padding: 0;
+    gap: var(--sm);
   }
   .nav__wrapper {
     gap: 0;
@@ -422,6 +432,9 @@ body.inactive::before {
     width: 200px;
     right: auto;
     left: 0;
+  }
+  .container__body {
+    padding: 0;
   }
   .container__title {
     font-size: var(--2xl);
